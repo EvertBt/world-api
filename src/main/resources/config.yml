@@ -1,0 +1,5 @@
+#Add a list section per world that needs a void border, separate radius and world with a /
+void-borders: []
+
+#Add a list section per world that needs a void protection, separate world and max height with a /
+void-protection: []

@@ -1,0 +1,26 @@
+name: WorldAPI
+version: '${version}'
+main: net.skyrift.worldapi.WorldAPI
+api-version: 1.19
+depend: [ Core ]
+commands:
+  voidprotect:
+    description: "Protects players from falling into the void"
+    usage: "/voidprotect <set|remove> <height>"
+    permission: "skyrift.admin.command.voidprotect"
+  voidborder:
+    description: "Adds a void border to a world"
+    usage: "/voidborder <set|remove> <radius>"
+    permission: "skyrift.admin.command.voidborder"
+  setworldspawn:
+    description: "Sets the world spawn"
+    usage: "/setworldspawn"
+    permission: "skyrift.admin.command.setworldspawn"
+  tpworld:
+    description: "Teleports you to a world"
+    usage: "/tpworld <world>"
+    permission: "skyrift.admin.command.tpworld"
+  createvoidworld:
+    description: "Creates a void world"
+    usage: "/createvoidworld <name>"
+    permission: "skyrift.admin.command.createvoidworld"
