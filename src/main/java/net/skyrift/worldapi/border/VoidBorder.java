@@ -71,6 +71,8 @@ public class VoidBorder implements Listener {
 
                 //Loop through all players in the world
                 world.getPlayers().forEach(player -> {
+                    if (!player.isOnline()) return;
+
                     Location location = player.getLocation();
                     if (location.getX() > spawnRadius || location.getX() < -spawnRadius || location.getZ() > spawnRadius || location.getZ() < -spawnRadius){
 

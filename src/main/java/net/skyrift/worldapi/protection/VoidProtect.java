@@ -72,6 +72,8 @@ public class VoidProtect implements Listener {
 
                 //Loop through all players in the world
                 world.getPlayers().forEach(player -> {
+                    if (!player.isOnline()) return;
+
                     //Teleport player to spawn if they are below the lowest Y
                     if (player.getLocation().getY() > lowestY) return;
 

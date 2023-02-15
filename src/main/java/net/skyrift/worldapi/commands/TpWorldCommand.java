@@ -31,11 +31,17 @@ public class TpWorldCommand extends SkyriftCommand {
         World world = Bukkit.getWorld(args[0]);
         AtomicReference<Location> location = new AtomicReference<>(new Location(world, x, y, z));
 
-        if (args.length >= 4){
-            location.get().setX(Double.parseDouble(args[1]));
-            location.get().setY(Double.parseDouble(args[2]));
-            location.get().setZ(Double.parseDouble(args[3]));
+        try{
+            if (args.length >= 4){
+                location.get().setX(Double.parseDouble(args[1]));
+                location.get().setY(Double.parseDouble(args[2]));
+                location.get().setZ(Double.parseDouble(args[3]));
+            }
+        }catch (NumberFormatException e){
+            player.sendRichMessage("<red>Invalid coordinates");
+            return true;
         }
+
 
         //Load world if it isn't loaded, then teleport player
         if (world == null){
